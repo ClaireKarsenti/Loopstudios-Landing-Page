@@ -1,0 +1,42 @@
+@use '../abstract/index' as *;
+
+main {
+  position: relative;
+
+  picture {
+    z-index: -1;
+    width: 100%;
+    img{
+      width: 100%;
+    }
+  }
+
+  h1 {
+    margin: 0 1rem;
+    padding: 1rem;
+    border: 1px solid $white;
+    font-family: $josefin;
+    font-size: $medium-size;
+    font-weight: $regular;
+    color: $white;
+    text-transform: uppercase;
+    word-break: break-word;
+    position: absolute;
+    top: 10rem;
+    left: 1rem;
+
+    @include media-min(31.25em) {
+      top: 9rem;
+      width: 50%;
+    }
+    
+    @include media-min(62.5em) {
+      margin: 0;
+      padding: 2rem;
+      width: 45%;
+      left: 8rem;
+      top: 12rem;
+      font-size: $big-size;
+    }
+  }
+}
