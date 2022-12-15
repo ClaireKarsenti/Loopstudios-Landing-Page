@@ -40,9 +40,9 @@ describe('burger menu', () => {
 describe('close menu', () => {
   test('when the screen is a mobile device and when the menu is displayed a cross should displayed to close it', () => {
     render(<Navbar />);
-    const burgerMenu = screen.getByTestId('crossMenu');
-    expect(burgerMenu).toHaveAttribute('src', 'icon-close.svg');
-    expect(burgerMenu).toHaveAttribute('alt', '');
-    expect(burgerMenu).toHaveAttribute('aria-hidden', 'true');
+    const crossMenu = screen.getByTestId('crossMenu');
+    expect(crossMenu).toHaveAttribute('src', 'icon-close.svg');
+    expect(crossMenu).toHaveAttribute('alt', '');
+    expect(crossMenu).toHaveAttribute('aria-hidden', 'true');
   });
 });
