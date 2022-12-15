@@ -17,17 +17,27 @@ const Navbar = () => {
   };
 
   return (
-    <header>
+    <header data-testid="header">
       <div>
-        <img src={logo} alt="" aria-hidden="true" />
+        <img data-testid="logo" src={logo} alt="" aria-hidden="true" />
       </div>
 
       <div className="mobile-nav-toggle" onClick={toggleLinks}>
         <button className={openNav ? 'close' : 'open'}>
-          <img src={burgerMenu} alt="" aria-hidden="true" />
+          <img
+            data-testid="burgerMenu"
+            src={burgerMenu}
+            alt=""
+            aria-hidden="true"
+          />
         </button>
         <button className={openNav ? 'open' : 'close'}>
-          <img src={closeMenu} alt="" aria-hidden="true" />
+          <img
+            data-testid="crossMenu"
+            src={closeMenu}
+            alt=""
+            aria-hidden="true"
+          />
         </button>
       </div>
 
