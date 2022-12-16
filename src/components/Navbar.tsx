@@ -19,13 +19,15 @@ const Navbar = () => {
   return (
     <header data-testid="header">
       <div>
-        <img data-testid="logo" src={logo} alt="" aria-hidden="true" />
+        <a href="/" data-testid="company-logo">
+          <img data-testid="logo" src={logo} alt="loopstudios logo" />
+        </a>
       </div>
 
       <div className="mobile-nav-toggle" onClick={toggleLinks}>
-        <button className={openNav ? 'close' : 'open'}>
+        <button data-testid="menu-toggle" className={openNav ? 'close' : 'open'}>
           <img
-            data-testid="burgerMenu"
+            data-testid="burgerImg"
             src={burgerMenu}
             alt=""
             aria-hidden="true"
@@ -33,7 +35,7 @@ const Navbar = () => {
         </button>
         <button className={openNav ? 'open' : 'close'}>
           <img
-            data-testid="crossMenu"
+            data-testid="crossImg"
             src={closeMenu}
             alt=""
             aria-hidden="true"
