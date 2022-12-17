@@ -3,10 +3,10 @@ import aboutDesktop from "../assets/images/desktop/image-interactive.jpg";
 
 const About = () => {
   return (
-    <article className="about-container">
+    <article className="about-container" data-testid="about">
       <picture>
         <source media="(min-width: 62.5em)" srcSet={aboutDesktop} />
-        <img src={aboutMobile} alt="" aria-hidden="true"/>
+        <img data-testid="about-img" src={aboutMobile} alt="" aria-hidden="true"/>
       </picture>
       <div className="text">
         <h2 className="text__heading">The leader in interactive VR</h2>
