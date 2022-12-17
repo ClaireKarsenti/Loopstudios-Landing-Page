@@ -1,0 +1,45 @@
+@use '../abstract/index' as *;
+
+.about-container {
+  max-width: 80vw;
+  text-align: center;
+  margin: 7rem auto;
+
+  .text {
+    padding: 0 2rem;
+
+    &__heading {
+      font: $regular $regular-size $josefin;
+      text-transform: uppercase;
+      padding: 1rem 0;
+      margin-top: 2rem;
+    }
+    &__content {
+      font-family: $alata;
+      color: $dark-gray;
+      letter-spacing: 1px;
+      line-height: 1.7;
+    }
+  }
+
+  @include media-min(62.5em) {
+    display: grid;
+    grid-template-columns: 1fr 40%;
+    position: relative;
+
+    .text {
+      position: absolute;
+      top: 11.5rem;
+      right: 2rem;
+      background: $white;
+      padding: 4rem 0.8rem 0 5rem;
+      text-align: left;
+      width: 50%;
+
+      &__heading {
+        margin: 0;
+        font-size: 4em;
+      }
+    }
+  }
+}
