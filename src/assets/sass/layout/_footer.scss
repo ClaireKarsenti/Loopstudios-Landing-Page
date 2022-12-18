@@ -1,0 +1,148 @@
+@use '../abstract/index' as *;
+
+footer {
+  background-color: $black;
+  color: $white;
+  padding: 2rem;
+  text-align: center;
+
+  @include media-min(31.25em) {
+    padding: 2rem 4rem;
+  }
+  @include media-min(62.5em) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2rem;
+    padding: 1.5rem 8rem;
+  }
+
+  .logo-container {
+    display: flex;
+    justify-content: center;
+    @include media-min(62.5em) {
+      display: block;
+      align-self: flex-end;
+    }
+    img {
+      width: auto;
+    }
+  }
+
+  ul.links {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 2rem 0;
+    @include media-min(62.5em) {
+      flex-direction: row;
+      padding: 0;
+      gap: 2rem;
+    }
+
+    li {
+      text-transform: capitalize;
+      a {
+        color: $white;
+        font-family: $alata;
+        font-size: 1.2em;
+        position: relative;
+
+        &::after {
+          content: '';
+          position: absolute;
+          bottom: -0.3rem;
+          display: flex;
+          left: 50%;
+          width: 0;
+          height: 0.2rem;
+          border-radius: 5px;
+          transform: translateX(-50%);
+          background-color: $white;
+          transition: $transition;
+        }
+
+        &:hover {
+          &::after {
+            width: 2.8rem;
+          }
+        }
+      }
+    }
+  }
+
+  ul.social {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem 0;
+
+    @include media-min(62.5em) {
+      grid-area: 1/2;
+      justify-self: end;
+    }
+    li {
+      a {
+        cursor: pointer;
+        color: $white;
+        font-size: $regular-size;
+        position: relative;
+        width: 3em;
+        height: 3em;
+
+        &::after {
+          content: '';
+          position: absolute;
+          bottom: -0.3rem;
+          left: 0;
+          width: 0;
+          height: 0.15rem;
+          border-radius: 5px;
+          transform: translateX(-50%);
+          background-color: $white;
+          transition: $transition;
+        }
+
+        &:hover {
+          &:after {
+            width: 1.3rem;
+          }
+        }
+      }
+    }
+  }
+
+  p.copyright {
+    color: $dark-gray;
+    font-family: $alata;
+    @include media-min(62.5em) {
+      text-align: end;
+      padding: 0;
+    }
+  }
+
+  p.attribution {
+    @extend p, .copyright;
+    transition: $transition;
+
+    & a:link,
+    & a:hover,
+    & a:visited,
+    & a:active {
+      text-decoration: none;
+    }
+    & a:hover {
+      color: $white;
+    }
+    & span.heart {
+      filter: invert(58%) sepia(0%) saturate(1%) hue-rotate(244deg)
+        brightness(94%) contrast(101%);
+    }
+    @include media-min(62.5em) {
+      text-align: end;
+      grid-column: 1 / span 2;
+    }
+  }
+}
