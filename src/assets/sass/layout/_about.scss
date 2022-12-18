@@ -29,16 +29,17 @@
 
     .text {
       position: absolute;
-      top: 11.5rem;
+      top: 12rem;
       right: 2rem;
       background: $white;
       padding: 4rem 0.8rem 0 5rem;
       text-align: left;
       width: 50%;
+      height: 100%;
 
       &__heading {
         margin: 0;
-        font-size: 4em;
+        font-size: $medium-half-size;
       }
     }
   }
