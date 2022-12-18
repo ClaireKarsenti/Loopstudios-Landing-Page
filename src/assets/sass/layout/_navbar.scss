@@ -20,15 +20,15 @@ header {
   @include media-min(62.5em) {
     display: none;
   }
-  .open {
-    display: block;
+  .navbar {
     border-color: transparent;
     background: transparent;
-  }
-  .close {
-    display: none;
-    border-color: transparent;
-    background: transparent;
+    &__open {
+      display: block;
+    }
+    &__close {
+      display: none;
+    }
   }
 }
 
@@ -75,9 +75,7 @@ nav {
       a {
         position: relative;
         color: $white;
-        font-family: $josefin;
-        font-weight: $regular;
-        font-size: $medium-size;
+        font: $regular $medium-size $josefin;
         @include media-min(62.5em) {
           font-size: 1.2rem;
           font-family: $alata;
@@ -97,10 +95,7 @@ nav {
 
         &:hover {
           &::after {
-            width: 5rem;
-            @include media-min(62.5em) {
-              width: 100%;
-            }
+            width: 100%;
           }
         }
       }

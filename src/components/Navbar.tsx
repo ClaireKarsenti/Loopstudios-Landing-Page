@@ -25,7 +25,7 @@ const Navbar = () => {
       </div>
 
       <div className="mobile-nav-toggle" onClick={toggleLinks}>
-        <button data-testid="menu-toggle" className={openNav ? 'close' : 'open'}>
+        <button data-testid="menu-toggle" className={`navbar ${openNav ? 'navbar__close' : 'navbar__open'}`}>
           <img
             data-testid="burgerImg"
             src={burgerMenu}
@@ -33,7 +33,7 @@ const Navbar = () => {
             aria-hidden="true"
           />
         </button>
-        <button className={openNav ? 'open' : 'close'}>
+        <button className={`navbar ${openNav ? 'navbar__open' : 'navbar__close'}`}>
           <img
             data-testid="crossImg"
             src={closeMenu}
