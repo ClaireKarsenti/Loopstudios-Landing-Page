@@ -1,7 +1,7 @@
 export const links: {id: number, url: string, text: string}[] = [
   {
     id: 1,
-    url: '/about',
+    url: '#about',
     text: 'about',
   },
   {
@@ -16,7 +16,7 @@ export const links: {id: number, url: string, text: string}[] = [
   },
   {
     id: 4,
-    url: '/products',
+    url: '#products',
     text: 'products',
   },
   {

@@ -4,7 +4,7 @@ const Products = () => {
   return (
     <section>
       <article>
-        <h2 className="heading">our creations</h2>
+        <h2 id="products" className="heading">our creations</h2>
         <ul className="products-container">
           {products?.map((product) => {
             const { id, mobileImg, desktopImg, text } = product;
