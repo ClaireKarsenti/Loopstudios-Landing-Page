@@ -2,10 +2,10 @@ import { fireEvent, render, screen } from '@testing-library/react';
 import Navbar from '../Navbar';
 
 const links: { text: string; location: string }[] = [
-  { text: 'about', location: '/about' },
+  { text: 'about', location: '#about' },
   { text: 'careers', location: '/careers' },
   { text: 'events', location: '/events' },
-  { text: 'products', location: '/products' },
+  { text: 'products', location: '#products' },
   { text: 'support', location: '/support' },
 ];
 
