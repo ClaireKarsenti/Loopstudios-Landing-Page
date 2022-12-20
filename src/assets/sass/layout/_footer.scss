@@ -49,17 +49,15 @@ footer {
         position: relative;
 
         &::after {
-          content: '';
-          position: absolute;
-          bottom: -0.3rem;
-          display: flex;
-          left: 50%;
-          width: 0;
-          height: 0.2rem;
-          border-radius: 5px;
-          transform: translateX(-50%);
-          background-color: $white;
-          transition: $transition;
+          @include listAfter(
+            -0.3rem,
+            0.2rem,
+            0,
+            50%,
+            $white,
+            translateX(-50%),
+            $transition
+          );
         }
 
         &:hover {
@@ -93,16 +91,15 @@ footer {
         height: 3em;
 
         &::after {
-          content: '';
-          position: absolute;
-          bottom: -0.3rem;
-          left: 0;
-          width: 0;
-          height: 0.15rem;
-          border-radius: 5px;
-          transform: translateX(-50%);
-          background-color: $white;
-          transition: $transition;
+          @include listAfter(
+            -0.3rem,
+            0.15rem,
+            0,
+            0,
+            $white,
+            translateX(-50%),
+            $transition
+          );
         }
 
         &:hover {

@@ -5,3 +5,17 @@
     }
   }
 }
+
+@mixin listAfter($bottom, $height, $width, $left, $color, $transform, $transition) {
+  content: '';
+  position: absolute;
+  bottom: $bottom;
+  display: flex;
+  left: $left;
+  width: $width;
+  height: $height;
+  border-radius: 5px;
+  background-color: $color;
+  transform: $transform;
+  transition: $transition;
+}
