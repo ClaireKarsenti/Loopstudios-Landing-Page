@@ -89,15 +89,15 @@ header {
     display: none;
   }
 }
-.mobile-nav-toggle .open {
-  display: block;
+.mobile-nav-toggle .navbar {
   border-color: transparent;
   background: transparent;
 }
-.mobile-nav-toggle .close {
+.mobile-nav-toggle .navbar__open {
+  display: block;
+}
+.mobile-nav-toggle .navbar__close {
   display: none;
-  border-color: transparent;
-  background: transparent;
 }
 
 .show-nav {
@@ -149,9 +149,7 @@ nav ul {
 nav ul li a {
   position: relative;
   color: hsl(0deg, 0%, 100%);
-  font-family: "Josefin Sans", sans-serif;
-  font-weight: 300;
-  font-size: 3rem;
+  font: 300 3rem "Josefin Sans", sans-serif;
 }
 @media screen and (min-width: 62.5em) {
   nav ul li a {
@@ -162,21 +160,18 @@ nav ul li a {
 nav ul li a::after {
   content: "";
   position: absolute;
-  bottom: -0.2rem;
-  left: 0;
+  bottom: -0.3rem;
+  display: flex;
+  left: 50%;
   width: 0;
-  border-radius: 10px;
   height: 0.2rem;
-  background: hsl(0deg, 0%, 100%);
+  border-radius: 5px;
+  background-color: hsl(0deg, 0%, 100%);
+  transform: translateX(-50%);
   transition: all 0.3s ease-in-out;
 }
 nav ul li a:hover::after {
-  width: 5rem;
-}
-@media screen and (min-width: 62.5em) {
-  nav ul li a:hover::after {
-    width: 100%;
-  }
+  width: 100%;
 }
 
 main {
@@ -308,13 +303,16 @@ section article ul.products-container li {
 section article ul.products-container li::after {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
+  bottom: 0;
+  display: flex;
+  left: 50%;
   width: 100%;
   height: 100%;
-  opacity: 0;
-  background: rgba(255, 255, 255, 0.3);
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.3);
+  transform: translateX(-50%);
   transition: all 0.3s ease-in-out;
+  opacity: 0;
 }
 section article ul.products-container li:hover::after {
   opacity: 1;
@@ -364,10 +362,12 @@ section article .button-box button {
 section article .button-box button::after {
   content: "";
   position: absolute;
-  top: 0;
+  bottom: 0;
+  display: flex;
   left: -1rem;
   width: 0;
   height: 100%;
+  border-radius: 5px;
   background-color: hsl(0deg, 0%, 0%);
   transform: skewX(-20deg);
   transition: all 0.5s ease-in-out;
@@ -444,8 +444,8 @@ footer ul.links li a::after {
   width: 0;
   height: 0.2rem;
   border-radius: 5px;
-  transform: translateX(-50%);
   background-color: hsl(0deg, 0%, 100%);
+  transform: translateX(-50%);
   transition: all 0.3s ease-in-out;
 }
 footer ul.links li a:hover::after {
@@ -477,12 +477,13 @@ footer ul.social li a::after {
   content: "";
   position: absolute;
   bottom: -0.3rem;
+  display: flex;
   left: 0;
   width: 0;
   height: 0.15rem;
   border-radius: 5px;
-  transform: translateX(-50%);
   background-color: hsl(0deg, 0%, 100%);
+  transform: translateX(-50%);
   transition: all 0.3s ease-in-out;
 }
 footer ul.social li a:hover:after {
